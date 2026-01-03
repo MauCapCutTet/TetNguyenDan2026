@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Thiếp - Tết Bính Ngọ 2026</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- AVATAR GIỐNG ẢNH 1 -->
+    <div class="avatar-frame">
+      <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
+      <img src="assets/frame.png" alt="Frame" class="avatar-border">
+    </div>
+
+    <!-- NAME + VERIFIED -->
+    <h1>
+      Tết Bính Ngọ 2026
+      <img src="assets/verified.png" class="verified-badge">
+    </h1>
+
+    <!-- INTRO -->
+    <div class="intro">
+      Ở đây có không khí Tết<br>
+      Tết Việt - Tết của người Việt<br>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="btn-container">
+
+      <button class="contact-btn tiktok" onclick="openLink('https://www.tiktok.com/@tet_binh_ngo.2026')">
+        <i class="fab fa-tiktok"></i> TikTok
+      </button>
+
+      <button class="contact-btn" onclick="openLink('https://lichngaytot.com/con-bao-nhieu-ngay-nua-den-tet-duong.html')">
+       <img src="assets/tetduonglich.png" class="btn-icon">
+       <span>Còn bao nhiêu ngày nữa đến Tết Dương lịch</span>
+      </button>
+
+
+      <button class="contact-btn" onclick="openLink('https://www.bachhoaxanh.com/kinh-nghiem-hay/con-bao-nhieu-ngay-nua-den-tet-2023-dem-nguoc-tet-2023-1414401')">
+       <img src="assets/tetnguyendan.png" class="btn-icon">
+       <span>Còn bao nhiêu ngày nữa đến Tết Nguyên Đán</span>
+      </button>
+     
+      <button class="contact-btn" onclick="openLink('https://lichngaytot.com/da-bao-nhieu-ngay-ke-tu-ngay.html')">
+       <img src="assets/baonhieungayketungay.png" class="btn-icon">
+       <span>Bao nhiêu ngày kể từ ngày</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MUSIC BUTTON -->
+  <button id="musicBtn" title="Play / Pause">
+    <i class="fa-solid fa-play"></i>
+  </button>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- SCRIPT -->
+  <script>
+    function openLink(url) {
+      window.open(url, "_blank");
+    }
+
+    const musicBtn = document.getElementById("musicBtn");
+    const bgMusic = document.getElementById("bgMusic");
+    let playing = false;
+
+    musicBtn.addEventListener("click", () => {
+      if (!playing) {
+        bgMusic.play();
+        musicBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        playing = true;
+      } else {
+        bgMusic.pause();
+        musicBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        playing = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
